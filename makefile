@@ -5,7 +5,7 @@ project:
 	avr-gcc -std=gnu99 -mmcu=atmega8 -O2 -o project main.c
 
 write: project.hex
-	avrdude -c arduino-ft232r -pm8 -b 115200 -U flash:w:project.hex
+	avrdude -c arduino-ft232r -pm8 -v -v  -b 115200 -U flash:w:project.hex
 	#sudo avrdude -c nikolaew -pm8  -P /dev/ttyS0 -U flash:w:project.hex
 clean:
 	rm project project.hex
